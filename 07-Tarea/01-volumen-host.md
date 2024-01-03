@@ -10,13 +10,18 @@
 docker run -d --name <nombre contenedor> --publish <mapeo de puertos> -v <ruta carpeta host>:<ruta carpeta contenedor> url: <nombre imagen>
 ```
 
+Se utiliza el siguiente comando:  
 ```
 docker run -d --name nginx2 --publish 8083:80 -v C:\Users\Ness\Desktop\C-E-SW\cons-ev-sw\07-Tarea\html:/usr/share/nginx/html nginx:alpine
 ```
 
+Y el resultado:  
+![volumen-nginx-alpine](images/volumen-nginx-alpine.png)
+
 ### ¿Qué sucede al ingresar al servidor de nginx?
 
 Al intentar acceder al servidor mediante el localhost en el puerto 8083 se muestra la siguiente pantalla con 403 Forbidden. El error generalmente indica que el servidor ha denegado el acceso al recurso solicitado.
+![puerto-8083-error](images/puerto-8083-error.png)
 
 
 ### ¿Qué pasa con el archivo index.html del contenedor?
@@ -33,30 +38,33 @@ Si no tienes un archivo `index.html` en tu directorio local `html`, entonces no 
 Se escoge el template de preferencia denominado *Dimension* y se descomprime en el `html`  del directorio local.
 ### ¿Qué sucede al ingresar al servidor de nginx?
 Se recarga la página y ahora el resultado es la página web del preview del template descargado.
+![puerto-8083](images/puerto-8083.png)
 ### Eliminar el contenedor
 
 ```
 docker rm nginx2
 ```
-
+Así:  
+![rm-nginx](images/rm-nginx.png)
 
 
 ### ¿Qué sucede al crear nuevamente el mismo contenedor con volumen de tipo host a los directorios definidos anteriormente?
-Al ejecutar el mismo comando, el resultado es el mismo, se carga la página web del template..
+Al ejecutar el mismo comando, el resultado es el mismo, se carga la página web del template.
 ```
 docker run -d --name nginx2 --publish 8083:80 -v C:\Users\Ness\Desktop\C-E-SW\cons-ev-sw\07-Tarea\html:/usr/share/nginx/html nginx:alpine
 ```
 
 ### ¿Qué hace el comando pwd?
-El comando `pwd` imprime la ruta completa del directorio de trabajo actual. 
+El comando `pwd` imprime la ruta completa del directorio de trabajo actual. Así:
 
-
+![pwd](images/pwd.png)
 
 ### Volumen tipo host usando PWD y PowerShell
 ```
 docker run -d --name server-nginx --publish published=5000,target=80 -v ${PWD}/html:/usr/share/nginx/html nginx:alpine
 ```
+Se ejecuta:  
+![server-pwd](images/server-pwd.png)
+Se obtiene el mismo resultado:
 
-```
-docker run -d --name server-nginx --publish published=5000,target=80 -v ${PWD}/html:/usr/share/nginx/html nginx:alpine
-```
+![puerto-5000](images/puerto-5000.png)

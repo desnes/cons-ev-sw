@@ -7,7 +7,7 @@ docker network create net-wp
 
 ```
 El resultado:  
-![net-wp](images\image.png)
+![net-wp](images/image.png)
 
 ### Para que persista la información es necesario conocer ¿en dónde mysql almacena la información?
 
@@ -43,11 +43,9 @@ docker run -d --name server-wordpress -e WORDPRESS_DB_HOST=server-mysql -e WORDP
 ```
 ### Personalizar la apariencia de wordpress y agregar una entrada
 Se crea una entrada:
-![personalizar-wordress](images\entrada-edit.png)
-![Alt text](image.png)
+![personalizar-wordpress](images/entrada-edit.png)
+![entradas](images/entradas.png)
 ### Eliminar el contenedor y crearlo nuevamente, ¿qué ha sucedido?
 
-Al crear el contenedor nuevamente, se montan los volúmenes para acceder a los mismos datos
-
-```
+Al crear el contenedor nuevamente, se montan los volúmenes para acceder a los mismos datos.
 ```

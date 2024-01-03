@@ -4,9 +4,9 @@
 Un volumen anónimo en Docker es un tipo de volumen que se crea y se adjunta a un contenedor sin un nombre específico
 
 ```
-docker run -d --name server-nginx -v /usr/share/nginx/html --publish published=9800,target=80 nginx:alpine
+docker run -d --name server-nginx-vol-an -v /usr/share/nginx/html --publish published=9800,target=80 nginx:alpine
 ```
-
+![vol-anom](images/vol-anom.png)
 ### Para eliminar el contenedor y el volumen
 
 ```
