@@ -48,4 +48,3 @@ Se crea una entrada:
 ### Eliminar el contenedor y crearlo nuevamente, ¿qué ha sucedido?
 
 Al crear el contenedor nuevamente, se montan los volúmenes para acceder a los mismos datos.
-```
