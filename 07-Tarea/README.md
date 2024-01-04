@@ -9,6 +9,6 @@ Esta práctica sirve para comprender y hacer uso de los siguientes tipos de volu
 
 Además, se realizo un ejercicio que consiste en la creación de un servidor Wordpress y un servidor SQL en una determinada red de Docker, con el fin de comprender la persistencia de datos en los contenedores. El cual se referencia:
 
-[Ejercicio de Wordpress](wordpress\README.md)
+[Ejercicio de Wordpress](wordpress/README.md)
 
 
